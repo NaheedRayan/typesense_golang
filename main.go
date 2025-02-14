@@ -57,7 +57,6 @@ func main() {
 			Country:      "USA",
 		},
 	}
-	log.Println("Inserting documents...")
 
 	for _, doc := range documents {
 		_, err := client.Collection("companies").Documents().Upsert(context.Background(), doc)
